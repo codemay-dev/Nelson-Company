@@ -1,0 +1,140 @@
+/*** Typography (Links, Paragraphs, Headings, etc.)
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Fonts */
+header {
+  font-family: $headfont;
+}
+#topBar {
+  font-family: $copyfont;
+  font-weight: 300;
+}
+#wrap {
+  font-family: $copyfont;
+}
+footer {
+  font-family: $copyfont;
+}
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: $headfont;
+  font-weight: 400;
+}
+h4, h5, h6, .h4, .h5, .h6 {
+  font-family: $copyfont;
+  font-weight: 300;
+}
+
+.btn, a.button, input.button {
+  font-family: $copyfont;
+  font-weight: 300;
+}
+
+/* Links */
+a {
+  color: $links;
+  text-decoration: none;
+}
+a:hover {
+  color: $links-hover;
+  text-decoration: underline;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+/* Paragraph */
+p {
+  margin: 0 0 15px;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+fieldset p {
+  margin-bottom: 15px;
+}
+
+/* Header Tags */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 0 0 15px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+h5 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+h6 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@include breakpoint-down(md) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@include breakpoint-down(xs) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

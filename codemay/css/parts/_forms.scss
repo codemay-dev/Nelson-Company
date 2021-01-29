@@ -1,0 +1,146 @@
+/*** Forms & Inputs
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*** Text, Email, Password ***/
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"] {
+  background: #f2f2f3;
+  border: 1px solid;
+  box-shadow: none;
+  border-radius: 3px;
+  color: #080B0F !important;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  -webkit-appearance: none;
+}
+
+/*** Text Area ***/
+textarea.form-control {
+  background: #f2f2f3;
+  border: 1px solid;
+  box-shadow: none;
+  border-radius: 3px;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #080B0F !important;
+}
+
+/*** Select ***/
+select {
+  background-color: #f2f2f3;
+  border: 1px solid;
+  box-shadow: none;
+  border-radius: 3px;
+  color: #080B0F !important;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+  /* Reset */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* New Arrow */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #777 50%),
+    linear-gradient(135deg, #777 50%, transparent 50%);
+  background-position:
+    calc(100% - 10px) calc(13px + 0px),
+    calc(100% - 5px) calc(13px + 0px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    6px 7px,
+    6px 7px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+option {
+  color: #080B0F !important;
+}
+option:first-child {
+  color: #080B0F !important;
+}
+
+.select2-results__option {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 10px;
+}
+
+.select2-container--default .select2-selection--single {
+  box-shadow: none;
+  border-radius: 3px;
+  color: #080B0F !important;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 35px;
+}
+
+/*** Focus ***/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+textarea.form-control:focus,
+.form-control:focus {
+  background: #f2f2f3;
+  box-shadow: none;
+  opacity: 1;
+}
+
+/*** Placeholder ***/
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder,
+textarea.form-control::placeholder,
+.form-control::placeholder {
+  color: #080B0F !important;
+  opacity: 0.6;
+}
+
+div.wpcf7-response-output {
+  font-size: 1.5rem;
+  text-align: center;
+  border: none !important;
+}
+span.wpcf7-not-valid-tip {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/*** Form Control ***/
+.form-control {
+  border-radius: 0;
+  margin: 10px 0;
+}
+
+
+/*** Contact Submit ***/
+input[type="submit"] {
+  float: right;
+}

@@ -1,0 +1,393 @@
+/*** Right Menu 
+---------------------------------------------------------------------------------***/
+
+#topBar .navbar-default {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+#topBar .menu {
+    letter-spacing: 1px;
+}
+#topBar .menu.mobile {
+    margin-left: 15px;
+}
+#topBar .navbar-nav {
+    > li {
+        &.contact {
+            border: 1px solid $defaultMenuColor;
+            border-radius: 15px;
+            padding: 0 15px;
+        }
+        > .nav-link {
+            padding: 5px 0px;
+            transition: $transition3;
+        }
+    }
+
+    > li.active {
+        > .nav-link {
+            border-bottom: 1px solid;
+        }
+    }
+}
+#topBar.scrollOn .navbar-nav {
+    > li {
+        &.contact {
+            border: 1px solid $scrollMenuColor;
+        }
+    }
+}
+#topBar .nav-link {
+    display: initial;
+    text-decoration: none;
+}
+
+body.noHero #topBar .navbar-nav {
+    > li {
+        &.contact {
+            border: 1px solid $scrollMenuColor;
+        }
+    }
+}
+
+/*** Dropdown ***/
+#topBar .dropdown-item {
+    transition: $transition3;
+}
+#topBar .dropdown-item:focus,
+#topBar .dropdown-item:hover {
+    background: none;
+}
+
+#topBar .dropdown-item.active {
+    background: none;
+    border-bottom: $border;
+}
+
+#topBar .navbar-toggler span {
+    background-color: $openMenuToggle;
+    transition: $transition3;
+}
+#topBar.scrollOn .navbar-toggler span,
+#topBar .navbar-toggler.close span {
+    background-color: $scrollMenuToggle;
+}
+
+#topBar .navbar {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+
+    > li {
+        float: none;
+        display: block;
+    }
+}
+
+/*** Main Navbar Stuff
+---------------------------------------------------------------------------------***/
+@include breakpoint-up(lg) {
+    /* This is for regular menu styles used on MD and up screen sizes */
+
+    /*** Nav ***/
+    #topBar .navbar-nav {
+        float: none;
+        text-align: right;
+
+        > li {
+            float: none;
+            display: inline-block;
+            margin: 0 1rem;
+
+            .nav-link {
+                padding: 3px 0 0;
+                color: $defaultMenuColor;
+            }
+
+            .nav-link:hover,
+            .nav-link:focus {
+                background: none;
+            }
+        }
+    }
+
+    #topBar.scrollOn .navbar-nav > li .nav-link {
+        color: $scrollMenuColor;
+    }
+
+    body.noHero #topBar .navbar-nav > li .nav-link {
+        color: $scrollMenuColor;
+    }
+
+    /*** Main Menu Active Page Link ***/
+    #topBar .navbar-nav {
+        > li.active {
+            > .nav-link,
+            > .nav-link:hover,
+            > .nav-link:focus {
+                background: none;
+            }
+        }
+    }
+
+    #topBar .navbar-nav .dropdown-menu {
+        border: none;
+        border-radius: 0;
+        top: 153%;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: auto;
+        transition: $transition3;
+        transition-delay: 0;
+    }
+
+    #topBar.scrollOn .navbar-nav .dropdown-menu {
+        transition: $transition1;
+        transition-delay: 150ms;
+    }
+
+    #topBar .dropdown-item {
+        display: block;
+        padding: 3px 0;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+}
+
+/*** Mobile Menu ***/
+@include breakpoint-down(lg) {
+    #topBar .navbar-nav > li {
+        margin: 10px 15px;
+    }
+
+    #menu-mobile-menu ul.icons {
+        margin: 10px 0 30px;
+        position: relative;
+    }
+
+    /*** Toggle Button ***/
+    #topBar .navbar-toggler {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        height: 30px;
+        padding: 0;
+        z-index: 10000;
+        cursor: pointer;
+        position: fixed;
+        right: 15px;
+        font-size: 1.25rem;
+        font-weight: normal;
+        text-shadow: none;
+        box-shadow: none;
+        transition: $transition3;
+        transform: rotate(-90deg);
+
+        .bars {
+            display: inline-block;
+        }
+
+        span {
+            background: $defaultMenuToggle none repeat scroll 0 0;
+            display: block;
+            height: 2px;
+            width: 25px;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+            backface-visibility: hidden;
+        }
+
+        span.icon-bar1 {
+            margin-bottom: 8px;
+            width: 15px;
+        }
+
+        span.icon-bar2 {
+            margin-bottom: 8px;
+            width: 20px;
+        }
+
+        .link {
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    #topBar .navbar-toggler:hover,
+    #topBar .navbar-toggler:focus {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+    }
+    #topBar .navbar-toggler:focus,
+    #topBar .navbar-toggler.close:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    #topBar.scrollOn .navbar-toggler.close {
+        margin-top: 0px;
+    }
+
+    #topBar .navbar-toggler.close {
+        opacity: 1;
+        transition: margin-left 0.5s ease-out, margin-top 300ms ease-out 300ms;
+
+        span.icon-bar1 {
+            margin-top: 5px;
+            margin-bottom: 0;
+            width: 25px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        span.icon-bar2 {
+            margin-bottom: 0;
+            opacity: 0;
+        }
+
+        span.icon-bar3 {
+            margin-top: -3px;
+            transform: rotate(-45deg);
+        }
+
+        span.icon-bar1,
+        span.icon-bar3 {
+            background: $openMenuToggle none repeat scroll 0 0;
+            opacity: 1;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+        }
+
+        span {
+            .link {
+                visibility: hidden;
+                opacity: 0;
+                width: 0;
+                transition: $transition3;
+            }
+        }
+    }
+    #topBar .navbar-toggler.close:not(:disabled):not(.disabled):focus,
+    #topBar .navbar-toggler.close:not(:disabled):not(.disabled):hover {
+        opacity: 1;
+    }
+
+    #topBar .navbar-nav a.navbar-brand {
+        padding: 0;
+        margin: 0 0 0 10px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: none;
+        transition: $transition3;
+    }
+    #topBar .navbar-nav .navbar-toggler.close a.navbar-brand {
+        transition: $transition3;
+    }
+
+    /*** Menu Wrapper ***/
+    #topBar .navbar-collapse {
+        background: $defaultMenuBG;
+        border-left: 3px solid $scrollMenuColor;
+        padding: 7rem 0 0;
+        height: 100%;
+        max-height: 100%;
+        width: 280px;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        bottom: 0;
+        right: -280px;
+        transition: $transition3;
+    }
+
+    #topBar .navbar-collapse.collapse {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #topBar .navbar-collapse.show {
+        visibility: visible;
+        opacity: 1;
+        right: 0px;
+    }
+
+    /*** Nav ul ***/
+    #topBar .navbar-nav {
+        float: none;
+        text-align: right;
+        transition: $transition3;
+    }
+    #topBar .navbar-collapse.collapse .navbar-nav {
+        padding-left: 15px;
+    }
+
+    /*** Mobile Menu Links ***/
+    #topBar .navbar-nav > li > .nav-link {
+        background: none;
+        padding: 3px 0px;
+        line-height: 20px;
+        font-size: 1rem;
+        text-align: right;
+        color: $scrollMenuColor;
+    }
+
+    #topBar .navbar-nav > li.active > .nav-link {
+        border: none;
+    }
+
+    /*** Mobile Menu Links Hover ***/
+    #topBar .navbar-nav > li > .nav-link:hover,
+    #topBar .navbar-nav > li > .nav-link:focus {
+        background: none;
+    }
+    /*** Mobile Menu Active Page Link ***/
+    #topBar .navbar-nav > li.active > .nav-link,
+    #topBar .navbar-nav > li.active > .nav-link:hover,
+    #topBar .navbar-nav > li.active > .nav-link:focus {
+        background: none;
+    }
+
+    #topBar .dropdown-menu {
+        background: transparent;
+        border: none;
+        margin-left: 15px;
+    }
+    #topBar .dropdown-toggle,
+    #topBar .dropdown-toggle:focus,
+    #topBar .dropdown-toggle:active,
+    #topBar .dropdown-toggle:hover {
+        border: none;
+    }
+    #topBar li.dropdown.show .dropdown-toggle {
+        border: none;
+    }
+    #topBar .dropdown-item {
+        margin-bottom: 5px;
+        padding: 5px 0;
+        text-align: right;
+        font-size: 0.8rem;
+    }
+    #topBar .dropdown-item.active {
+        background: none;
+    }
+    #topBar .dropdown-item:hover {
+        background: none;
+    }
+}
+
+@include breakpoint-down(md) {
+    #topBar .navbar-nav > li.active {
+        height: auto;
+        border-bottom: none;
+    }
+
+    #topBar .navbar-nav .nav-link {
+        padding: 3px 0px;
+        display: inline-block;
+    }
+}

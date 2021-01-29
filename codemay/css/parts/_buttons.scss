@@ -1,0 +1,71 @@
+/*** Buttons
+----------------------------------------------------------------------------------------------------------------------------------*/
+.btn, a.button, input.button {
+  border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+a.button, input.button {
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:focus, a.button:focus, input.button:focus {
+  box-shadow: none;
+}
+.btn-sm {
+  font-weight: normal;
+  padding: 5px 15px;
+  font-weight: .8rem;
+}
+.btn-solid,
+a.button,
+input.button,
+.btn-solid.dark {
+  background: #000;
+  border: 2px solid #000;
+  color: #fff;
+}
+.btn-solid.light {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #000;
+}
+.btn-hollow,
+.btn-hollow.dark {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+.btn-hollow.light {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-hollow:hover,
+a.button:hover,
+input.button:hover,
+.btn-hollow.dark:hover {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.btn-solid:hover,
+.btn-solid.dark:hover {
+  background: transparent;
+  border-color: #000;
+  color: #000;
+}
+.btn-hollow.light:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+.btn-solid.light:hover {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}

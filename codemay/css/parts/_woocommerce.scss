@@ -1,0 +1,36 @@
+/*** Single Product ***/
+.single-product {
+  text-align: center;
+}
+.woocommerce div.product div.images.woocommerce-product-gallery {
+  display: none;
+}
+.woocommerce div.product div.summary,
+.woocommerce #content div.product div.summary,
+.woocommerce-page div.product div.summary,
+.woocommerce-page #content div.product div.summary {
+  float: none;
+  width: auto;
+}
+
+.woocommerce .single-product .product_meta {
+  display: none;
+}
+
+.woocommerce .single-product .quantity {
+  display: none;
+}
+
+.woocommerce div.product form.cart .button {
+  float: none;
+  display: block;
+  margin: auto;
+}
+h1.product_title {
+  font-size: 2rem;
+}
+
+/*** Checkout ***/
+span.woocommerce-input-wrapper {
+  width: 100%;
+}
